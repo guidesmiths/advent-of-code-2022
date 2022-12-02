@@ -1,0 +1,2 @@
+{ part1Solution: 67450 }
+{ part2Solution: 199357 }
