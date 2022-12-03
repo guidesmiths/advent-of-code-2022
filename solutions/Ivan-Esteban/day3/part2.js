@@ -368,15 +368,14 @@ const resolve = (input) => {
     acc[chunkIndex].push(curr);
     return acc;
   }, []);
-  const result = chunkedArray.reduce((acc, curr) => {
-    const [elf1, elf2, elf3] = curr;
-    return (
+  const result = chunkedArray.reduce(
+    (acc, [elf1, elf2, elf3]) =>
       acc +
       charNumbers[
         [...elf1].find((el) => [...elf2].includes(el) && [...elf3].includes(el))
-      ]
-    );
-  }, 0);
+      ],
+    0
+  );
   return result;
 };
 
